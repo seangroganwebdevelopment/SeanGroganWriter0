@@ -1,0 +1,415 @@
+@import url('https://fonts.googleapis.com/css2?family=Mynerve&family=Roboto&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Merriweather&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Yuji+Boku&display=swap');
+/* --------------RESEt-------------- */
+
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  /* outline: 1px solid lime !important; */
+}
+
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+input,
+button,
+textarea {
+  font: inherit;
+}
+
+/* General Styles */
+
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Roboto, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+header {
+    background: #333;
+    color: #fff;
+    padding: 10px 0;
+    text-align: center;
+}
+
+
+
+/* NAVBAR */
+
+
+nav ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin: 0 10px;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+}
+.nav-toggle {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+    margin: 10px;
+}
+
+.nav-toggle span {
+    background: #fff;
+    margin: 3px 0;
+    width: 25px;
+    height: 3px;
+}
+
+@media (max-width: 600px) {
+    nav ul {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        text-align: center;
+    }
+
+    nav ul.open {
+        display: flex;
+    }
+
+    nav ul li {
+        display: block;
+        margin: 10px 0;
+    }
+
+    .nav-toggle {
+        display: flex;
+        flex-direction: column;
+        cursor: pointer;
+        margin: 10px;
+    }
+
+    .nav-toggle span {
+        background: #fff;
+        margin: 3px 0;
+        width: 25px;
+        height: 3px;
+    }
+}
+
+@media (max-width: 600px) {
+    #navToggle.open + ul {
+        display: flex;
+    }
+}
+
+
+
+/* HERO */
+
+#hero {
+    background: url('images/jordan-whitfield-XNZL8fmd_JU-unsplash.jpg') no-repeat center center/cover;
+    height: 300px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    text-align: center;
+}
+
+.hero-content h1 {
+    margin: 0;
+    font-size: 2.5em;
+}
+
+.hero-content h1, .hero-content p {
+    animation: fadeIn 2s ease-in-out;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+
+/* Media Queries - HERO SECTION */
+@media (max-width: 600px) {
+    .hero-content h1 {
+        font-size: 2em;
+    }
+}
+
+@media (min-width: 601px) and (max-width: 768px) {
+    #hero {
+        height: 400px;
+    }
+
+    .hero-content h1 {
+        font-size: 3em;
+    }
+}
+
+@media (min-width: 769px) and (max-width: 960px) {
+    #hero {
+        height: 500px;
+    }
+
+    .hero-content h1 {
+        font-size: 3.5em;
+    }
+}
+
+@media (min-width: 961px) and (max-width: 1200px) {
+    #hero {
+        height: 600px;
+    }
+
+    .hero-content h1 {
+        font-size: 4em;
+    }
+}
+
+@media (min-width: 1201px) {
+    #hero {
+        height: 700px;
+    }
+
+    .hero-content h1 {
+        font-size: 4.5em;
+    }
+}
+
+
+/* BIO*/
+
+#bio {
+    padding: 20px;
+    text-align: center;
+}
+
+/* PORTFOLIO */
+
+#portfolio {
+    padding: 20px;
+    text-align: center;
+}
+
+.portfolio-item {
+    display: inline-block;
+    margin: 10px;
+    width: 200px;
+    vertical-align: top;
+}
+
+.portfolio-item img {
+    width: 100%;
+    height: auto;
+}
+
+.portfolio-item h3 {
+    margin: 10px 0 5px;
+}
+
+.portfolio-item p {
+    font-size: 0.9em;
+}
+
+.gallery {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.gallery img {
+    max-width: 100%;
+    margin: 10px;
+    transition: transform 0.2s;
+}
+
+.gallery img:hover {
+    transform: scale(1.05);
+}
+
+
+/* BLOG */
+
+
+#blog {
+    padding: 20px;
+    background-color: #ddd;
+}
+
+.blog-post {
+    border-bottom: 1px solid #ddd;
+    padding: 10px 0;
+}
+
+.blog-post h3 {
+    margin: 0;
+}
+
+.blog-post .date {
+    font-size: 0.8em;
+    color: #999;
+}
+
+.blog-post p {
+    margin: 5px 0;
+}
+
+.blog-post a {
+    color: #007BFF;
+    text-decoration: none;
+}
+
+.blog-post a:hover {
+    text-decoration: underline;
+}
+
+/* TESTIMONIALS */
+#testimonials {
+    background: #f9f9f9;
+    padding: 20px;
+    text-align: center;
+}
+
+.testimonial {
+    margin: 10px auto;
+    max-width: 600px;
+}
+
+.testimonial p {
+    font-style: italic;
+}
+
+.testimonial cite {
+    display: block;
+    margin-top: 5px;
+    font-size: 0.9em;
+    color: #555;
+}
+
+
+
+/* CONTACT */
+
+#contact {
+    padding: 20px;
+    text-align: center;
+}
+
+/* FOOTER */
+
+footer {
+    background: #333;
+    color: #fff;
+    text-align: center;
+    padding: 10px 0;
+}
+
+footer .social-media {
+    margin-top: 10px;
+}
+
+footer .social-media a {
+    margin: 0 5px;
+}
+
+footer .social-media img {
+    width: 24px;
+    height: 24px;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+form label, form input, form textarea {
+    margin-bottom: 10px;
+}
+
+form input[type="submit"] {
+    background-color: #333;
+    color: #fff;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+form input[type="submit"]:hover {
+    background-color: #555;
+}
+
+
+
+
+
+/* NOTES AND FURTHER USEFUL CODE */
+
+/* Media Queries */
+@media (max-width: 600px) {
+    .hero-content h1 {
+        font-size: 2em;
+    }
+}
+
+@media (min-width: 601px) and (max-width: 768px) {
+    #hero {
+        height: 400px;
+    }
+
+    .hero-content h1 {
+        font-size: 3em;
+    }
+}
+
+@media (min-width: 769px) and (max-width: 960px) {
+    #hero {
+        height: 500px;
+    }
+
+    .hero-content h1 {
+        font-size: 3.5em;
+    }
+}
+
+@media (min-width: 961px) and (max-width: 1200px) {
+    #hero {
+        height: 600px;
+    }
+
+    .hero-content h1 {
+        font-size: 4em;
+    }
+}
+
+@media (min-width: 1201px) {
+    #hero {
+        height: 700px;
+    }
+
+    .hero-content h1 {
+        font-size: 4.5em;
+    }
+}
